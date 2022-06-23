@@ -20,4 +20,38 @@ public class TreeMethods {
         root.right=createBTree(root.right);
         return root;
     }
+
+    /*
+    *
+    * preOrdertraversal first visit the root node then it call the left of its root node and then right
+    * PreOrderTraversal is work on NodeLeftRight principal
+    *
+    * @Param root
+    * */
+    public void preOrderTraversal(Node root)
+    {
+        if(root==null)
+            return;
+        System.out.print(root.data+" ");
+        preOrderTraversal(root.left);
+        preOrderTraversal(root.right);
+    }
+
+    /*
+    *
+    *
+    * LeftRightNode(first visit left then right after that node)
+    * */
+
+    public void postOrderTraversal(Node root)
+    {
+        if(root==null)
+            return;
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);
+        System.out.print(root.data+" ");
+    }
+
+
+
 }

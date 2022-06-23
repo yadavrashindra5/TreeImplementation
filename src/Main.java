@@ -6,6 +6,9 @@ public class Main {
         TreeMethods tree=new TreeMethods();
         Node root=null;
         root=tree.createBTree(root);
+        tree.preOrderTraversal(root);
+        System.out.println();
+        tree.postOrderTraversal(root);
     }
 }
 
