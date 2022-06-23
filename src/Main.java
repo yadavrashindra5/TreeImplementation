@@ -9,6 +9,8 @@ public class Main {
         list.add(9);
         list.add(4);
         System.out.println(list);
+        list.remove(0);
+        System.out.println(list);
     }
 }
 
