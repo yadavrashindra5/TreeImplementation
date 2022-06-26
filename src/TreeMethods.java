@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class TreeMethods {
@@ -50,6 +52,33 @@ public class TreeMethods {
         postOrderTraversal(root.left);
         postOrderTraversal(root.right);
         System.out.print(root.data+" ");
+    }
+
+    public void inOrderTraversal(Node root)
+    {
+        if(root==null)
+        {
+            return ;
+        }
+        inOrderTraversal(root.left);
+        System.out.print(root.data+" ");
+        inOrderTraversal(root.right);
+    }
+
+
+    public void levelOrderTraversal(Node root)
+    {
+        Queue<Node>queue=new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty())
+        {
+            Node temp=queue.poll();
+            System.out.print(temp.data+" ");
+            if(temp.left!=null){
+            queue.add(temp.left);}
+            if(temp.right!=null){
+            queue.add(temp.right);}
+        }
     }
 
 

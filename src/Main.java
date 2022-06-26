@@ -9,6 +9,10 @@ public class Main {
         tree.preOrderTraversal(root);
         System.out.println();
         tree.postOrderTraversal(root);
+        System.out.println();
+        tree.inOrderTraversal(root);
+        System.out.println();
+        tree.levelOrderTraversal(root);
     }
 }
 
